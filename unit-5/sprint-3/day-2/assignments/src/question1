@@ -1,0 +1,66 @@
+insert into customers values(1,'abc','abc','abc@gmail.com','chennai','chennai','TN','60001');
+insert into customers values(2,'def','def','def@gmail.com','chandigarh','chandigarh','HR','13410');
+insert into customers values(3,'ghi','ghi','ghi@gmail.com','banglore','banglore','KT','50001');
+insert into customers values(4,'jkl','jkl','jkl@gmail.com','jaipur','jaipur','RJ','40001');
+insert into customers values(5,'mno','mno','mno@gmail.com','srinagar','srinagar','JK','20001');
+insert into customers values(6,'pqr','pqr','pqr@gmail.com','patna','patna','BH','10001');
+insert into customers values(7,'stu','stu','stu@gmail.com','bhopal','bhopal','MP','90001');
+insert into customers values(8,'vwx','vwx','vwx@gmail.com','chandigarh','chandigarh','HR','11001');
+insert into customers values(9,'yza','yza','yza@gmail.com','ambala','ambala','HR','12001');
+insert into customers values(10,'pst','pst','pst@gmail.com','varanasi',varanasi','UP','13001');
+
+select * from customers;
++-------------+------------+-----------+---------------+------------+------------+-------+----------+
+| customer_id | first_name | last_name | email         | address    | city       | state | zip_code |
++-------------+------------+-----------+---------------+------------+------------+-------+----------+
+|           1 | abc        | abc       | abc@gmail.com | chennai    | chennai    | TN    | 60001    |
+|           2 | def        | def       | def@gmail.com | chandigarh | chandigarh | HR    | 13410    |
+|           3 | ghi        | ghi       | ghi@gmail.com | banglore   | banglore   | KT    | 50001    |
+|           4 | jkl        | jkl       | jkl@gmail.com | jaipur     | jaipur     | RJ    | 40001    |
+|           5 | mno        | mno       | mno@gmail.com | srinagar   | srinagar   | JK    | 20001    |
+|           6 | pqr        | pqr       | pqr@gmail.com | patna      | patna      | BH    | 10001    |
+|           7 | stu        | stu       | stu@gmail.com | bhopal     | bhopal     | MP    | 90001    |
+|           8 | vwx        | vwx       | vwx@gmail.com | chandigarh | chandigarh | HR    | 11001    |
+|           9 | yza        | yza       | yza@gmail.com | ambala     | ambala     | HR    | 12001    |
++-------------+------------+-----------+---------------+------------+------------+-------+----------+
+
+insert into orders values(1,5,'2016-11-11');
+insert into orders values(2,1,'2016-10-01');
+insert into orders values(3,2,'2016-06-01');
+insert into orders values(4,2,'2015-06-01');
+insert into orders values(5,6,'2015-06-01');
+insert into orders values(6,6,'2018-11-11');
+insert into orders values(7,4,'2018-11-11');
+
+select * from orders;
++----------+-------------+-------------------+
+| order_id | customer_id | order_placed_date |
++----------+-------------+-------------------+
+|        1 |           1 | 2016-11-11        |
+|        2 |           1 | 2016-10-01        |
+|        3 |           2 | 2016-06-01        |
+|        4 |           2 | 2015-06-01        |
+|        5 |           6 | 2015-06-01        |
+|        6 |           6 | 2018-11-11        |
+|        7 |           4 | 2018-11-11        |
++----------+-------------+-------------------+
+
+SELECT
+	customers.email, COUNT(*) AS order_count
+FROM
+	orders
+INNER JOIN
+	customers on orders.customer_id = customers.customer_id
+WHERE
+	orders.order_placed_date BETWEEN CAST('2016-01-01' AS DATE) AND CAST('2016-12-31' AS DATE)
+GROUP BY
+	customers.email
+ORDER BY
+	order_count DESC;
+
++---------------+-------------+
+| email         | order_count |
++---------------+-------------+
+| abc@gmail.com |           2 |
+| def@gmail.com |           1 |
++---------------+-------------+

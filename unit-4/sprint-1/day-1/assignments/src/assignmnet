@@ -1,0 +1,20 @@
+1. What are the benefits of using Java programming language?
+Ans - i) It is easy to learn and its syntax is easy to understand.
+ii)Java is object oriented .
+iii)Portable and Platform independent- Java source code is compiled and converted into byte code,
+this byte can run on multiple platforms.
+iv)Java has a very good memory management system in the form of a heap memory management system.
+It is a dynamic memory management system, it allocates and deallocates memory for the objects at runtime.
+v)Java supports multithreading to enhance the performance.
+
+2. Why is Java known as a platform independent language?
+Ans - Java source code is compiled and converted into bytecode.
+this bytecode can run on multiple platforms i.e. Write Once and Run Anywhere(WORA),
+we can compile the java code in one Operating System and execute it on another Operating System.
+
+
+3.What is the main() method in Java, explain its signature in detail.
+Ans - Main method is the entry point of java application. Whenever we execute a java program,
+the main function gets called and the code inside this main method gets executed.
+public static void main(String[ ] args){
+}

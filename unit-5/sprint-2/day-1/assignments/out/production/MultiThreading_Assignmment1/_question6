@@ -1,0 +1,24 @@
+Q6) What if we call Java run() method directly instead start() method?
+ex-
+class A implements Runnable{
+    public void run(){
+        System.out.println("Inside run");
+    }
+}
+_question7.Main-
+-----
+
+class _question7.Main{
+    public static void main(Strings[] args){
+        System.out.println("inside main");
+        A a=new A();
+        Thread tr =new Thread(a);
+        tr.run();
+        // If we dirctly do .run() then the process with be single threaded only
+        because, in class A there is a run method , so it will present
+        overriden method as it turn comes but not paralley.
+        // Instead if we do .start() - It will make run method as a thread, so there
+        we two thread one will be default main an other one is run. Once we have
+        initialized the thread, the if we run run, ten it will run parallely.
+    }
+}

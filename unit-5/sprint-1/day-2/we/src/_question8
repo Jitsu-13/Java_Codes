@@ -1,0 +1,44 @@
+Method reference --
+-- It is the simplified form of Lambda expression.
+-- Instead of creating LE with all the details if we have
+ a static/non-static method with same return type and
+ argument we can use method reference of an existing method
+ of any class to the functional interface variable.
+
+Types of Method References:
+There are following types of method references in java:
+1. Reference to a static method.
+2. Reference to an instance (non-static) method.
+3. Reference to a constructor.
+
+
+ Example -
+ Intr.java -
+ ==============
+ public interface Intr{
+    public void sayHello(String name);
+ }
+
+ public class Demo{
+    public static void fun1(String s){
+        System.out.println("inside fun1"+s);
+    }
+    public void fun2(String y){
+         System.out.println("inside fun2"+y);
+    }
+    Demo(String z){
+        System.out.println("inside constructor"+z);
+    }
+
+    public static void main(String[] args){
+        Intr x1=Demo::fun1;
+        x1.sayHello("Wel");
+
+        Intr x2=new Demo()::fun1;
+        x2.sayHello("Come");
+
+        Intr x3=Demo::new;
+        x3.sayHello("Sujit");
+
+    }
+ }

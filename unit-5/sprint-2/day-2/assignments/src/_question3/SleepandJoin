@@ -1,0 +1,55 @@
+Sleep() is static methods of suspending the thread.If
+we want to suspend the thread based on time then we use sleep()
+eg-  Thread.sleep(1000)- this method will suspend the current thread which is
+under execution with those many millisecond passed as argument (1000ms -1s);
+
+ex =
+class Main extends Thread{
+    public void run(){
+        for(int i=0;i<10;i++){
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println("Inside run" +i);
+        }
+    }
+    public static void main(String[] args) {
+        Main job = new Main();
+        job.start();
+        System.out.println("end of main()...");
+    }
+
+}
+
+Suspending Thread Conditionally -join() method
+if we want to suspend a running thread conditionally the we should use join method
+of thread class. The join() method is a non-static method. If a thread want to wait until
+completion of otger thread then we should use join() method.
+
+ex -
+class A implements Runnable{
+int sum;
+    public void run(){
+        for (int i = 0; i < 10; i++) {
+            System.out.println("inside A thread");
+            sum = sum + i;
+        }
+
+    }
+}
+
+class Main {
+    public static void main(String[] args) throws InterruptedException {
+    A a1 = new A();
+    Thread t = new Thread(a1);
+    t.start();
+    t.join();
+    int result = a1.sum;
+    for (int i = 0; i < 10; i++) {
+    System.out.println("inside main thread....");
+    System.out.println(result);
+}
+}
+}

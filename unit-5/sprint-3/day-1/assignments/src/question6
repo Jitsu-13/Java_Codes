@@ -1,0 +1,11 @@
+select CNAME,ACTNO from deposit;
++---------+-------+
+| CNAME   | ACTNO |
++---------+-------+
+| Anil    | 100   |
+| SUNIL   | 101   |
+| Rahul   | 102   |
+| Madhuri | 103   |
+| Pramod  | 104   |
+| Sandip  | 105   |
++---------+-------+

@@ -1,0 +1,7 @@
+Q2) What are the benefits of using Multithreading?
+Ans-Advantages of Java Multithreading-
+1. It doesn't block the user because the threads are independent and you can
+perform multiple operations at the same time.
+2. You can perform many operations at the sametime, so it saves time.
+3. Threads are independent so it doesn't affect other threads if an exception occur
+in a single thread.

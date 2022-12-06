@@ -1,0 +1,9 @@
+Q3/- What is the difference between the Class level lock and the Object level lock?
+Ans Object level lock- is unique for each object of a class
+Class level lock -it is unique for exh class.
+If a thread is required to execute static synchronized method then it s requires
+a class level lock. The object level lock and class level locks both are independent
+and there is no link between them.
+While a thread is executing a static synchronized method, the remaining threads are not allowed to execute any other
+static synchronized method of that class simultaneously (**even on the multiple object of that class also)
+but remaining threads are allowed to execute normal static and synchronized non-static methods and normal nonstatic methods simultaneously

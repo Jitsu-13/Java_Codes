@@ -1,0 +1,37 @@
+Q2/-Implement the following functional interfaces with some basic examples
+using Lambda
+expression.
+1. Predicate
+ex -
+class Main{
+    public static void main(String[] args){
+        Predicate(Integer) p =s-> s>0;
+        System.out.println(p.test(10));  // true;
+        System.out.println(p.test(-15));  // false;
+    }
+}
+2. Supplier
+ex -
+class Main{
+    public static void main(String[] args){
+        Suppler(String) s =()-> "This is Supplier Method";
+        System.out.println(s.get());  //  This is Supplier Method
+
+    }
+}
+3. Consumer
+ex -
+class Main{
+    public static void main(String[] args){
+        Consumer(Integer) p =s-> System.out.println("Your roll is"+s);
+        p.accept(10); // Your roll is 10;
+    }
+}
+4. Function
+ex -
+class Main{
+    public static void main(String[] args){
+        Function(Integer,String) f =s-> "This is a number"+i;
+        System.out.println(f.apply(10));  // This is a number 10;
+    }
+}

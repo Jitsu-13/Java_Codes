@@ -1,0 +1,7 @@
+Q4/ What is the difference between a synchronized method and a synchronized block?
+Ans- If very few lines of code require synchronization , then it is not
+recommended to declare entire method as synchronized.Then we have to enclose those few lines of the
+code in synchronized block.
+
+The main advantage of synchronized block over synchronized method is, it reduces the
+waiting time of the threads and improve the performance of the application.

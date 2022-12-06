@@ -1,0 +1,70 @@
+i)
+insert into deposit values('100','Anil','VRCE',1000.00,STR_TO_DATE('01-04-1995', '%d-%m-%Y'));
+insert into deposit values('101','SUNIL','MGROAD',5000.00,STR_TO_DATE('04-01-1996','%d-%m-%Y'));
+insert into deposit values('102','Rahul','KAROLBAGH',3500.00,STR_TO_DATE('17-11-1995', '%d-%m-%Y'));
+insert into deposit values('103','Madhuri','CHANDI',1200.00,STR_TO_DATE('17-12-1996','%d-%m-%Y'));
+insert into deposit values('104','Pramod','MGROAD',30000.00,STR_TO_DATE('27-03-1996','%d-%m-%Y'));
+insert into deposit values('105','Sandip','KAROLBAGH',2000.00,STR_TO_DATE('31-03-1996','%d-%m-%Y'));
+
+select * from deposit;
++-------+---------+-----------+--------+------------+
+| ACTNO | CNAME   | BNAME     | AMOUNT | ADATE      |
++-------+---------+-----------+--------+------------+
+| 100   | Anil    | VRCE      |   1000 | 1995-04-01 |
+| 101   | SUNIL   | MGROAD    |   5000 | 1996-01-04 |
+| 102   | Rahul   | KAROLBAGH |   3500 | 1995-11-17 |
+| 103   | Madhuri | CHANDI    |   1200 | 1996-12-17 |
+| 104   | Pramod  | MGROAD    |  30000 | 1996-03-27 |
+| 105   | Sandip  | KAROLBAGH |   2000 | 1996-03-31 |
++-------+---------+-----------+--------+------------+
+
+ii)
+insert into branch values('VRCE','Nagpur');
+insert into branch values('KAROLBAGH','Delhi');
+insert into branch values('CHANDI','Delhi');
+insert into branch values('MGROAD','Banglore');
+
+ select * from branch;
++-----------+----------+
+| BNAME     | CITY     |
++-----------+----------+
+| VRCE      | Nagpur   |
+| KAROLBAGH | Delhi    |
+| CHANDI    | Delhi    |
+| MGROAD    | Banglore |
++-----------+----------+
+
+iii)
+insert into customer values('Anil','Calcuta');
+insert into customer values('Rahul','Baroda');
+insert into customer values('Madhuri','Nagpur');
+insert into customer values('Pramod','Nagpur');
+insert into customer values('Sunil','Delhi');
+select * from customer;
++---------+---------+
+| CNAME   | CITY    |
++---------+---------+
+| Rahul   | Baroda  |
+| Madhuri | Nagpur  |
+| Pramod  | Nagpur  |
+| Sunil   | Delhi   |
+| Anil    | Calcuta |
++---------+---------+
+
+iv)
+insert into borrow values('201','Anil','VRCE',1000.00);
+insert into borrow values('206','Rahul','KAROLBAGH',5000.00);
+insert into borrow values('311','Sunil','MGROAD',3000.00);
+insert into borrow values('321','Madhuri','CHANDI',2000.00);
+insert into borrow values('375','Pramod','MGROAD',8000.00);
+
+select * from borrow;
++--------+---------+-----------+--------+
+| LOANNO | CNAME   | BNAME     | AMOUNT |
++--------+---------+-----------+--------+
+| 201    | Anil    | VRCE      |   1000 |
+| 206    | Rahul   | KAROLBAGH |   5000 |
+| 311    | Sunil   | MGROAD    |   3000 |
+| 321    | Madhuri | CHANDI    |   2000 |
+| 375    | Pramod  | MGROAD    |   8000 |
++--------+---------+-----------+--------+

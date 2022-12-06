@@ -1,0 +1,24 @@
+Sleep and Join methods both are static methods of suspending the thread.If
+we want to suspend the thread based on time then we use sleep()
+eg-  Thread.sleep(1000)- this method will suspend the current thread which is
+under execution with those many millisecond passed as argument (1000ms -1s);
+
+ex =
+class Main extends Thead{
+    public void run(){
+        for(int i=0;i<10;i++){
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println("Inside run" +i);
+        }
+    }
+    public static void main(String[] args) {
+        Main job = new Main();
+        job.start();
+        System.out.println("end of main()...");
+    }
+
+}

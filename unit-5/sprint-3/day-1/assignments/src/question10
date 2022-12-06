@@ -1,0 +1,3 @@
+select * from deposit where cname LIKE 'c%';
+Empty set (0.02 sec)
+there is no name which begins with C;

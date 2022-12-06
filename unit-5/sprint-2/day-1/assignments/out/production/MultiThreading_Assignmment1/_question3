@@ -1,0 +1,16 @@
+Q3) Differentiate between process and thread based multitasking.
+Ans- Multitasking is the process of executing multiple task simultaneously.
+We use multitasking to utilize the CPU. We can acieve multitasking in two ways-
+1. Process Based Multitasking-
+--------------------------------
+* Each process has an address in the memory, so each processes are allocated
+different memory area.
+* A process is heavyweight.
+* The cost of communication between the process is high.
+* Switching from one process to other requires some time for saving and loading register,
+memory maps and loading registers.
+2. Thread Based Multitasking-
+-------------------------------
+* Threads share the same memory space(a thread is a part of process)
+* A thread is lightweight
+* The cost of communication between threads is low.

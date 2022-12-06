@@ -1,0 +1,7 @@
+select * from borrow where amount BETWEEN 2000 and 3000;
++--------+---------+--------+--------+
+| LOANNO | CNAME   | BNAME  | AMOUNT |
++--------+---------+--------+--------+
+| 311    | Sunil   | MGROAD |   3000 |
+| 321    | Madhuri | CHANDI |   2000 |
++--------+---------+--------+--------+

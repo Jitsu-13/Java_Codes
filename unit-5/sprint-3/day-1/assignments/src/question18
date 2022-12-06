@@ -1,0 +1,9 @@
+select DISTINCT bname from deposit;
++-----------+
+| bname     |
++-----------+
+| VRCE      |
+| MGROAD    |
+| KAROLBAGH |
+| CHANDI    |
++-----------+

@@ -1,0 +1,25 @@
+
+Functional Programming -
+----------------------
+It was only introduced in java 1.8,I this type
+of programming functions are treated as values which means that we can assign
+these function to a variable or can pass as parameter in other functions, also we can also
+return function from another function.
+
+Functional Interface-
+---------------------
+There are interface which has only one abstract method. We can achieve
+functional programming with the help of functional interface.
+
+String emp= “10,Manoj,80000”
+1. Predicate<Employee> -
+
+Demo.java
+-------
+
+public static void main(String[] args){
+Predicate<Integr> s =s-> s>8000;
+System.out.println
+}
+
+

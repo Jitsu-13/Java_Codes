@@ -1,0 +1,11 @@
+Q1/ - Write down some predefined Functional interfaces in the java library at least
+4
+interfaces, with their methods.
+Ans-
+1. java.lang.Comparable: public int compareTo(Object obj);
+2. java.util.Comparator: public int compare(Object obj1, Object obj2);
+3. java.lang.Runnable: public void run();
+5. Predicate<T> :public boolean test(T t);
+6. Consumer<T> : public void accept(T t);
+7. Supplier<T> :public R get();
+8. Function<T,R> :public R apply(T);

@@ -1,0 +1,20 @@
+Method Reference -
+-------------------
+Instead of creating a lambda expression with all the details, with the help
+of method reference we can refer to existing method of any class which have
+same return type and same input parameter.
+
+static method -
+---------------
+Intr a1 =Main::fun1;
+
+Non-static Method-
+------------------
+Intr a2 =new Main()::fun1;
+
+Constructor-
+-------------
+Intr a3 =Main::new;
+
+
+

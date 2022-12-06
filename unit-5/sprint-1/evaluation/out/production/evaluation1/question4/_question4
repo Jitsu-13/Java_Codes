@@ -1,0 +1,53 @@
+features of Stream API-
+------------------------
+1. It do not store the element , it only represent the element in sequence
+2. It represents only the flow of objects, not the primitive.
+3. Operation performed on the stream objects does not modify the source.
+4. With the help of stream objects we perform various useful operation on the
+collection data in functional style, like filtering some elements, printing
+some elements, transforming some elements.
+
+Intermediate Methods-
+----------------------
+these methods return a new stream object, instead of the final output.
+ex-
+map()--It takes java.util.function.Function. Function interface object as
+argument and transform the element to new element and returns the mapped
+element in another stream.
+filter()- This method filter the elmement on the basis of parameter you set.
+
+terminal method-
+---------------
+Stream object return the final output.
+ex-
+forEach(Consumer c)- This streamm method iterate through the element which passes through it.
+min() and max()- These methos are terminal method which takes a comparator object using which decide a
+min or max value.
+count() etc.
+
+Ex -Intermediate Method -filter()
+public class Demo{
+    public static void main(String[] args){
+        List<Integer> list =new ArrayList<>();
+        list.add(10);
+        list.add(20);
+        list.add(30);
+        list.add(40);
+        list.add(50);
+
+        Stream<Integer> str1=list.stream();
+        Stream<Integer> str2=str1.filter(s-> s>20);
+        str2.forEach(s->System.out.println(s));
+    }
+}
+
+Ex -Terminal Method -forEach()
+public class Demo{
+    public static void main(String[] args){
+        List<String> list =Arrays.asList("one","two","three","four","five");
+
+
+        Stream<Integer> str=list.stream();
+        str.forEach(s->System.out.println(s));
+    }
+

@@ -1,0 +1,15 @@
+Q6: What is the difference between Runnable and Callable interface?
+Ans-
+Runnable-
+-----------
+1. It does not return anything -return type void.
+2. Only public void run() method is present.
+3. Belongs to java.lang package
+4. If any exception we need to handle using try catch block.
+
+Callable-
+----------
+1. It can return anything -return type Object.
+2. Only public Object call() throws Exception method is present.
+3. no need to handle exception separately.
+4.Belongs to java.util.Concurrent package.

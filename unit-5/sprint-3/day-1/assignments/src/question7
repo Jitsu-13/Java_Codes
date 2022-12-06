@@ -1,0 +1,7 @@
+select * from customer where city='nagpur';
++---------+--------+
+| CNAME   | CITY   |
++---------+--------+
+| Madhuri | Nagpur |
+| Pramod  | Nagpur |
++---------+--------+

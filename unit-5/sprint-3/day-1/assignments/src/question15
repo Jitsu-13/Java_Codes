@@ -1,0 +1,10 @@
+select * from deposit where amount>1000 order by cname desc;
++-------+---------+-----------+--------+------------+
+| ACTNO | CNAME   | BNAME     | AMOUNT | ADATE      |
++-------+---------+-----------+--------+------------+
+| 101   | SUNIL   | MGROAD    |   5000 | 1996-01-04 |
+| 105   | Sandip  | KAROLBAGH |   2000 | 1996-03-31 |
+| 102   | Rahul   | KAROLBAGH |   3500 | 1995-11-17 |
+| 104   | Pramod  | MGROAD    |  30000 | 1996-03-27 |
+| 103   | Madhuri | CHANDI    |   1200 | 1996-12-17 |
++-------+---------+-----------+--------+------------+

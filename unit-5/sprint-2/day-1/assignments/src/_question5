@@ -1,0 +1,24 @@
+Q5) Differentiate between the Thread class and Runnable interface for creating a
+Thread? with proper example.
+Ans- Thread class and Runnable interface are the two structure using which we
+implement Thread based multitasking in java.
+
+We implement thread either of the following two ways-
+1. By implementing Runnable interface
+ex-
+class A implements Runnable{
+    public void run{
+        // tasks
+    }
+}
+
+2. By extending thread class
+ex-
+class A extends Thread{
+    public void run(){
+        // tasks
+    }
+}
+
+Internally Thread class also implements Runnable interface and override run()
+method with emty implementation.

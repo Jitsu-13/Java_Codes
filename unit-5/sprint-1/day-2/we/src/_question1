@@ -1,0 +1,6 @@
+Comparable - If we want to define the sorting logic of an object, within a class
+then we should use comparable;
+
+Comparator - With comparator we have two benefits-
+1. We can externalize the sorting logic of an object to outside that class.
+2. With the help of comparator we can define multiple sorting logic.

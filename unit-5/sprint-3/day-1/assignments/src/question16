@@ -1,0 +1,7 @@
+select * from borrow where cname LIKE '__a%' OR cname LIKE'__d%';
++--------+---------+--------+--------+
+| LOANNO | CNAME   | BNAME  | AMOUNT |
++--------+---------+--------+--------+
+| 321    | Madhuri | CHANDI |   2000 |
+| 375    | Pramod  | MGROAD |   8000 |
++--------+---------+--------+--------+

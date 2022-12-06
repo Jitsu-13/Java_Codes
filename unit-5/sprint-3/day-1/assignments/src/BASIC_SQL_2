@@ -1,0 +1,122 @@
+CREATE TABLE STUDENT
+(
+NAME VARCHAR(20),
+ROLLNO INT,
+BRANCH VARCHAR(20),
+CITY VARCHAR(20)
+);
+
+INSERT INTO STUDENT VALUES('VIJAYA',150,'CSE','CHENNAI');
+INSERT INTO STUDENT VALUES('SITA',202,'ETC','KOLKATA');
+INSERT INTO STUDENT VALUES('RAVI',300,'EEE','DELHI');
+INSERT INTO STUDENT VALUES('BASU',165,'ETC','CHENNAI');
+INSERT INTO STUDENT VALUES('RASMI',107,'ETC','RKL');
+INSERT INTO STUDENT VALUES('KARAN',111,'CSE','CTC');
+INSERT INTO STUDENT VALUES('REKHA',117,'BME','BBSR');
+
+1.
+ SELECT COUNT(NAME) CSE FROM STUDENT WHERE BRANCH='CSE';
++-----+
+| CSE |
++-----+
+|   2 |
++-----+
+SELECT COUNT(NAME) EEE FROM STUDENT WHERE BRANCH='EEE';
++-----+
+| EEE |
++-----+
+|   1 |
++-----+
+ SELECT COUNT(NAME) ETC FROM STUDENT WHERE BRANCH='ETC';
++-----+
+| ETC |
++-----+
+|   3 |
++-----+
+SELECT COUNT(NAME) BME FROM STUDENT WHERE BRANCH='BME';
++-----+
+| BME |
++-----+
+|   1 |
++-----+
+
+2.
+SELECT COUNT(NAME) NUMBER FROM STUDENT WHERE BRANCH LIKE 'E%';
++--------+
+| NUMBER |
++--------+
+|      4 |
++--------+
+3.
+ALTER TABLE STUDENT ADD MARKS INT;
+DESC STUDENT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| NAME   | varchar(20) | YES  |     | NULL    |       |
+| ROLLNO | int         | YES  |     | NULL    |       |
+| BRANCH | varchar(20) | YES  |     | NULL    |       |
+| CITY   | varchar(20) | YES  |     | NULL    |       |
+| MARKS  | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+4.
+BEFORE
+DESC STUDENT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| NAME   | varchar(20) | YES  |     | NULL    |       |
+| ROLLNO | int         | YES  |     | NULL    |       |
+| BRANCH | varchar(20) | YES  |     | NULL    |       |
+| CITY   | varchar(20) | YES  |     | NULL    |       |
+| MARKS  | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+AFTER-
+ALTER TABLE STUDENT MODIFY NAME VARCHAR(25);
+
+
+mysql> DESC STUDENT;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| NAME   | varchar(25) | YES  |     | NULL    |       |
+| ROLLNO | int         | YES  |     | NULL    |       |
+| BRANCH | varchar(20) | YES  |     | NULL    |       |
+| CITY   | varchar(20) | YES  |     | NULL    |       |
+| MARKS  | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+5.
+DELETE FROM STUDENT WHERE BRANCH='ETC';
+SELECT * FROM STUDENT;
++--------+--------+--------+---------+-------+
+| NAME   | ROLLNO | BRANCH | CITY    | MARKS |
++--------+--------+--------+---------+-------+
+| VIJAYA |    150 | CSE    | CHENNAI |  NULL |
+| RAVI   |    300 | EEE    | DELHI   |  NULL |
+| KARAN  |    111 | CSE    | CTC     |  NULL |
+| REKHA  |    117 | BME    | BBSR    |  NULL |
++--------+--------+--------+---------+-------+
+
+6.
+RENAME TABLE STUDENT TO STUDENTINFORMATION;
+
+DESC STUDENTINFORMATION;
++--------+-------------+------+-----+---------+-------+
+| Field  | Type        | Null | Key | Default | Extra |
++--------+-------------+------+-----+---------+-------+
+| NAME   | varchar(25) | YES  |     | NULL    |       |
+| ROLLNO | int         | YES  |     | NULL    |       |
+| BRANCH | varchar(20) | YES  |     | NULL    |       |
+| CITY   | varchar(20) | YES  |     | NULL    |       |
+| MARKS  | int         | YES  |     | NULL    |       |
++--------+-------------+------+-----+---------+-------+
+
+7.
+DROP TABLE STUDENTINFORMATION;
+
+8.
+DROP TABLE STUDENTINFORMATION;
+

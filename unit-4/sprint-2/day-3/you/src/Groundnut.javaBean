@@ -1,0 +1,31 @@
+public class Groundnut {
+    private String colorofTheouterShell;
+    private int numberofSeeds;
+    //public getter and setter;
+    //getter:read the values;
+
+
+    public String getColorofTheouterShell(){
+        return this.colorofTheouterShell;
+    }
+    public void setColorofTheouterShell(String colorofTheouterShell){
+        this.colorofTheouterShell=colorofTheouterShell;
+    }
+
+    public int getNumberofSeeds() {
+        return numberofSeeds;
+    }
+
+    public void setNumberofSeeds(int numberofSeeds) {
+        this.numberofSeeds = numberofSeeds;
+    }
+
+    public Groundnut(){
+
+    }
+
+    public Groundnut(String colorofTheouterShell, int numberofSeeds) {
+        this.colorofTheouterShell = colorofTheouterShell;
+        this.numberofSeeds = numberofSeeds;
+    }
+}

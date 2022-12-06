@@ -1,0 +1,25 @@
+Q4) What are the different states of a thread, or what is thread lifecycle?
+Ans- Threads have the following state-
+1. New State-
+------------
+When new thread is initiated , that state is called new state.
+Thread a =new Thread(r);
+
+2. Runnable State-
+-------------------
+The thread is started but the scheduler is yet to schedule.
+a.start()
+
+3. Running State-
+---------------------
+Selected to run by the scheduler.
+
+4.Dead State-
+-------------------
+If the run method completes, then thread goes into the dead state.
+
+5. Blocked State-
+-------------------
+Thread class have some methods like 0 sleep()/wait() by which functionalities
+are not executed dpr sometime,that state is called Bo
+locked State.

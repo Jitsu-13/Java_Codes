@@ -1,0 +1,6 @@
+ select * from borrow where amount NOT BETWEEN 2000 and 8000;
++--------+-------+-------+--------+
+| LOANNO | CNAME | BNAME | AMOUNT |
++--------+-------+-------+--------+
+| 201    | Anil  | VRCE  |   1000 |
++--------+-------+-------+--------+

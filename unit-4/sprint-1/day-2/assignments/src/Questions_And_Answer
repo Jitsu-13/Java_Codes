@@ -1,0 +1,14 @@
+Q1) Explain Type casting and its types with examples?
+Ans - The procedure of converting one datatype into its equivalent another datatype is known as typecasting.
+There are two type of typecasting-
+i. Implicit typecasting (upcasting/widening)
+ii. Explicit typecasting (downcasting/narrowing)
+
+ex- int x=50;
+    byte y=(byte) x;
+
+
+
+Q3) Explain the difference between local and instance variables?
+Ans - If a variable is inside a class it is known as instance variable and if a variable is
+ inside a method it is known as local variable.

@@ -1,0 +1,122 @@
+Race Condition-
+If the multiple threads are trying to operate simulatenously on same functionality
+Concurrency issue leads to the race condition, and race condition leads to data
+inconsistency.
+Java is a multithreaded language and there is high risk of occurence of race
+condition. Because same resource may be accessed by two or more threads at the same time
+and may change the data.
+To solve the data inconsistency problem in java synchronized keyword is used.
+So the thread-safety is achieved and race condition is avoided by the help of synchronized keyword.
+
+Ex -
+
+package week4.day3;
+public class Race {
+}
+class Counter implements Runnable
+{
+private int c = 0;
+public void increment()
+{
+try
+{
+Thread.sleep(10);
+}
+catch (InterruptedException e)
+{
+//Auto-generated catch block
+e.printStackTrace();
+}
+c++;
+}
+public void decrement()
+{
+c--;
+}
+public int getValue()
+{
+return c;
+}
+@Override
+Day14: Multithreading, Executor Framework 18
+public void run()
+{
+//incrementing
+this.increment();
+System.out.println("Value for Thread After increment " + Thread.currentThread().getName() + " " + this.getVa
+lue());
+//decrementing
+this.decrement();
+System.out.println("Value for Thread at last " + Thread.currentThread().getName() + " " + this.getValue());
+}
+}
+class RaceConditionDemo
+{
+public static void main(String args[])
+{
+Counter counter = new Counter();
+Thread t1 = new Thread(counter, "Thread-1");
+Thread t2 = new Thread(counter, "Thread-2");
+Thread t3 = new Thread(counter, "Thread-3");
+t1.start();
+t2.start();
+t3.start();
+}
+}
+//Overcoming Race condition
+package week4.day3;
+public class Race {
+}
+class Counter implements Runnable
+{
+private int c = 0;
+public void increment()
+{
+try
+{
+Thread.sleep(10);
+}
+catch (InterruptedException e)
+{
+//Auto-generated catch block
+e.printStackTrace();
+}
+c++;
+}
+public void decrement()
+{
+c--;
+}
+public int getValue()
+{
+return c;
+}
+@Override
+public void run()
+{
+synchronized (this)
+{
+//incrementing
+this.increment();
+System.out.println("Value for Thread After increment " + Thread.currentThread().getName() + " " + this.g
+etValue());
+//decrementing
+this.decrement();
+System.out.println("Value for Thread at last " + Thread.currentThread().getName() + " " + this.getValue
+());
+}
+}
+}
+class RaceConditionDemo
+{
+public static void main(String args[])
+{
+Counter counter = new Counter();
+Thread t1 = new Thread(counter, "Thread-1");
+Thread t2 = new Thread(counter, "Thread-2");
+Thread t3 = new Thread(counter, "Thread-3");
+t1.start();
+t2.start();
+t3.start();
+}
+}
